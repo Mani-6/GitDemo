@@ -1,0 +1,29 @@
+<div align= "center">
+    <h1>iShare - Where Ideas Conclave </h1>
+</div>
+<table class="table mt-4 table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Article Id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Tags</th>
+            <th>Date</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let b of books">
+            <td>{{b.id}} </td>
+            <td>{{b.title}} </td>
+            <td>{{b.author}} </td>
+            <td>
+                <li *ngFor = "let t of b.tags">
+                    {{t}}
+                </li>
+            </td>
+            <td>{{b.date}} </td>
+            <td>{{b.rating}} </td>
+        </tr>
+    </tbody>
+</table>
